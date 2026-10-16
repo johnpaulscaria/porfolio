@@ -167,44 +167,55 @@
     </p>
 
     <!-- Native HTML expand/collapse; no JavaScript required -->
-    <details class="story-details">
-      <summary class="button story-read">
-        Read the summary ↓
-      </summary>
+   ```html
+<!-- STORY SUMMARY -->
+<button
+  type="button"
+  class="button story-read"
+  onclick="
+    const summary = document.getElementById('story-summary');
+    summary.hidden = !summary.hidden;
+    this.textContent = summary.hidden
+      ? 'Read the summary ↓'
+      : 'Show less ↑';
+  "
+>
+  Read the summary ↓
+</button>
 
-      <div class="story-summary">
-        <h4>The story behind the story</h4>
+<div id="story-summary" hidden>
+  <div class="story-summary">
+    <h4>The story behind the story</h4>
 
-        <p>
-          My journey began with a three-day train ride from Kerala to Ahmedabad
-          for my first corporate job. Excited to live independently, travel and meet
-          successful people, I was unprepared for the challenges that awaited me.
-        </p>
+    <p>
+      My journey began with a three-day train ride from Kerala to Ahmedabad
+      for my first corporate job. Excited to live independently, travel and
+      meet successful people, I was unprepared for the challenges ahead.
+    </p>
 
-        <p>
-          Language barriers, difficult accommodation, illness and loneliness made
-          me question whether I belonged there. Many times, I wanted to quit and
-          return home. It was a difficult introduction to living independently.
-        </p>
+    <p>
+      Language barriers, difficult accommodation, illness and loneliness
+      made me question whether I belonged there. Many times, I wanted to
+      quit and return home.
+    </p>
 
-        <p>
-          Gradually, things began to change. Friendships, small improvements in my
-          living situation, movies, prayer and discovering Brazilian Jiu-Jitsu helped
-          me find my footing. I started to feel more confident, even though life
-          wasn't suddenly perfect.
-        </p>
+    <p>
+      Gradually, friendships, movies, prayer and discovering Brazilian
+      Jiu-Jitsu helped me adapt. I began to feel more confident, even
+      though life wasn't suddenly perfect.
+    </p>
 
-        <p>
-          The biggest lesson was that the situation around me had not changed
-          as much as I had. I was learning to adapt, face discomfort and trust
-          myself. What initially felt impossible eventually became an experience
-          that shaped me.
-        </p>
+    <p>
+      The biggest lesson was that the situation around me had not changed
+      as much as I had. I learned to face discomfort, trust myself and
+      keep going. What initially felt impossible became an experience
+      that shaped me.
+    </p>
 
-        <p class="story-quote">“This too shall pass.”</p>
-      </div>
-    </details>
-
+    <p class="story-quote">“This too shall pass.”</p>
+  </div>
+</div>
+```
     <div class="story-actions">
       <a
         class="button story-download"
@@ -225,7 +236,11 @@
   </div>
 
   <div class="values-list">
-
+   <div>
+      <span>00</span>
+      <h3>God is Real</h3>
+      <p>Everything in life points to a higher power beyond natural explanation.</p>
+    </div>
     <div>
       <span>01</span>
       <h3>Stay curious</h3>
