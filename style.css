@@ -260,7 +260,22 @@
   .story-top {
     margin-bottom: 25px;
   }
+```css
+/* Ensure the summary stays hidden until clicked */
+#story-summary[hidden] {
+  display: none !important;
+}
 
+#story-summary:not([hidden]) {
+  display: block;
+  margin-top: 24px;
+}
+
+button.story-read {
+  cursor: pointer;
+  font-family: var(--sans);
+}
+```
   .story-intro {
     font-size: 19px;
   }
